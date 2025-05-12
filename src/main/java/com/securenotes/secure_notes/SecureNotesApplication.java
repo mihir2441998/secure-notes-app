@@ -1,16 +1,14 @@
 package com.securenotes.secure_notes;
 
 import com.securenotes.secure_notes.Utils.enums.AppRole;
-import com.securenotes.secure_notes.model.note.security.Role;
-import com.securenotes.secure_notes.model.note.security.User;
+import com.securenotes.secure_notes.model.security.Role;
+import com.securenotes.secure_notes.model.security.User;
 import com.securenotes.secure_notes.repository.RoleRepository;
 import com.securenotes.secure_notes.repository.UserRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.security.crypto.password.PasswordEncoder;
 
 import java.time.LocalDate;
 

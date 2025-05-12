@@ -4,6 +4,7 @@ import com.securenotes.secure_notes.Dtos.NoteDto;
 import com.securenotes.secure_notes.Utils.NoteMapper;
 import com.securenotes.secure_notes.model.note.Note;
 import com.securenotes.secure_notes.repository.NotesRepository;
+import com.securenotes.secure_notes.services.AuditLogService;
 import com.securenotes.secure_notes.services.NotesService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -16,6 +17,9 @@ public class NotesServicesImpl implements NotesService {
     @Autowired
     private NotesRepository noteRepository;
 
+    @Autowired
+    private AuditLogService auditLogService;
+
     @Override
     public NoteDto createNoteForUser(String username, String content, String noteTitle) {
         Note note = new Note();
@@ -23,6 +27,7 @@ public class NotesServicesImpl implements NotesService {
         note.setOwningUser(username);
         note.setNoteTitle(noteTitle);
         Note savedNote = noteRepository.save(note);
+        auditLogService.logNoteChange(username,note,"CREATE");
         return NoteMapper.MapToNoteDto(savedNote);
     }
 
@@ -33,6 +38,7 @@ public class NotesServicesImpl implements NotesService {
         note.setNoteContent(content);
         note.setNoteTitle(noteTitle);
         Note updatedNote = noteRepository.save(note);
+        auditLogService.logNoteChange(username,note,"UPDATE");
         return NoteMapper.MapToNoteDto(updatedNote);
     }
 
@@ -41,6 +47,7 @@ public class NotesServicesImpl implements NotesService {
         Note note = noteRepository.findById(noteId).orElseThrow(
                 () -> new RuntimeException("Note not found")
         );
+        auditLogService.logNoteChange(username,note,"DELETE");
         noteRepository.delete(note);
     }
 

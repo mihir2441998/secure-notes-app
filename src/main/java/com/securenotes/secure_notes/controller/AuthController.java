@@ -3,8 +3,8 @@ package com.securenotes.secure_notes.controller;
 
 import com.securenotes.secure_notes.Dtos.*;
 import com.securenotes.secure_notes.Utils.enums.AppRole;
-import com.securenotes.secure_notes.model.note.security.Role;
-import com.securenotes.secure_notes.model.note.security.User;
+import com.securenotes.secure_notes.model.security.Role;
+import com.securenotes.secure_notes.model.security.User;
 import com.securenotes.secure_notes.repository.RoleRepository;
 import com.securenotes.secure_notes.repository.UserRepository;
 import com.securenotes.secure_notes.security.jwt.JwtUtils;

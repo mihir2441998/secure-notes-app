@@ -1,6 +1,6 @@
 package com.securenotes.secure_notes.repository;
 
-import com.securenotes.secure_notes.model.note.security.User;
+import com.securenotes.secure_notes.model.security.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

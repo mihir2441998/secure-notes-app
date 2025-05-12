@@ -1,7 +1,7 @@
 package com.securenotes.secure_notes.security;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.securenotes.secure_notes.model.note.security.User;
+import com.securenotes.secure_notes.model.security.User;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.security.core.GrantedAuthority;

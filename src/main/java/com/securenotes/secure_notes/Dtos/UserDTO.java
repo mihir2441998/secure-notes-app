@@ -1,6 +1,6 @@
 package com.securenotes.secure_notes.Dtos;
 
-import com.securenotes.secure_notes.model.note.security.Role;
+import com.securenotes.secure_notes.model.security.Role;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

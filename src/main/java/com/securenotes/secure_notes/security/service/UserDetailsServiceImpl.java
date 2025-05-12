@@ -1,6 +1,6 @@
 package com.securenotes.secure_notes.security.service;
 
-import com.securenotes.secure_notes.model.note.security.User;
+import com.securenotes.secure_notes.model.security.User;
 import com.securenotes.secure_notes.repository.UserRepository;
 import com.securenotes.secure_notes.security.UserDetailsImpl;
 import org.springframework.beans.factory.annotation.Autowired;

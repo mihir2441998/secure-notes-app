@@ -2,7 +2,7 @@ package com.securenotes.secure_notes.security.service;
 
 
 import com.securenotes.secure_notes.Dtos.UserDTO;
-import com.securenotes.secure_notes.model.note.security.User;
+import com.securenotes.secure_notes.model.security.User;
 
 import java.util.List;
 
